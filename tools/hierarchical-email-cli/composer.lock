@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1e13b66d0fae3fa6e464eeb55ef87a13",
-    "content-hash": "08e4662fa3351113e82b819ef67df458",
+    "hash": "bf48d83a915a5a56338dbdc5b236ef65",
+    "content-hash": "f88535c7a533305689b39ecdd5cca09c",
     "packages": [
         {
             "name": "consolidation/annotated-command",
@@ -1106,16 +1106,16 @@
         },
         {
             "name": "westkingdom/hierarchical-email-cli",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/westkingdom/hierarchical-email-cli.git",
-                "reference": "49b024d07f25697f09a66862bfa471ffc8b8ba06"
+                "reference": "870b7de5f94bd52ecbadccf55784d67c6889fb78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/westkingdom/hierarchical-email-cli/zipball/49b024d07f25697f09a66862bfa471ffc8b8ba06",
-                "reference": "49b024d07f25697f09a66862bfa471ffc8b8ba06",
+                "url": "https://api.github.com/repos/westkingdom/hierarchical-email-cli/zipball/870b7de5f94bd52ecbadccf55784d67c6889fb78",
+                "reference": "870b7de5f94bd52ecbadccf55784d67c6889fb78",
                 "shasum": ""
             },
             "require": {
@@ -1156,7 +1156,7 @@
             ],
             "description": "Commandline tool for the Hierarchical Group Email library.",
             "homepage": "https://github.com/westkingdom/hierarchical-email-cli",
-            "time": "2016-09-22 05:02:11"
+            "time": "2016-09-22 09:23:03"
         },
         {
             "name": "westkingdom/hierarchical-group-email",
