@@ -1,0 +1,19 @@
+# Ignore all dot files.
+# Explicitly name important dot files that we particularly want to
+# ignore, just for documentation purposes.
+.*
+.google-api
+.ssh
+
+# Explicitly list those dot files that we wish to include
+!.gitignore
+!.php
+!.bashrc
+!.bash_profile
+!.drush
+
+# Other files to ignore
+currentstate.westkingdom.org.yaml
+logs
+Maildir
+tools/hierarchical-email-cli
