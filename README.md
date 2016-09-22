@@ -53,3 +53,12 @@ The 'composer install' operation, on the other hand, runs with very little resou
 
 - https://help.dreamhost.com/hc/en-us/articles/214200668-How-do-I-create-a-phprc-file-via-SSH-
 - https://help.dreamhost.com/hc/en-us/articles/214899037-Installing-Composer-overview
+
+## Next Steps
+
+- Update group memberships via cron
+  - Better logging (send stdout to a log file, and error messages to stderr)
+  - Web service to run immediately
+  - Locking / throttling, so that cron and ws invocations do not overlap
+- Automatically create gmail accounts requested and approved on westkingdom.org.
+- Web service to show incremental log output
