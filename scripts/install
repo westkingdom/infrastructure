@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * This script installs the composer dependencies for the
+ * various applications we use.
+ */
+$home = dirname(__DIR__);
+
+print "#\n# Installing Drush dependencies\n#";
+passthru("cd $home/tools/drush && composer install");
+
+print "#\n# Installing hierarchical-email-cli dependencies\n#";
+passthru("cd $home/tools/hierarchical-email-cli && composer install");
