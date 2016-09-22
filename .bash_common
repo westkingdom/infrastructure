@@ -1,3 +1,3 @@
 # Common settings for login and non-login shells
 
-PATH=/usr/local/php70/bin:$HOME/tools/drush/vendor/bin:$HOME/tools/hierarchical-email-cli/vendor/bin:$HOME/.php/composer:$HOME/.composer/vendor/bin:$PATH
+PATH=/usr/local/php70/bin:$HOME/scripts:$HOME/tools/drush/vendor/bin:$HOME/tools/hierarchical-email-cli/vendor/bin:$HOME/.php/composer:$HOME/.composer/vendor/bin:$PATH
