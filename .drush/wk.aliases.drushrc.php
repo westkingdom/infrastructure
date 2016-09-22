@@ -1,5 +1,14 @@
 <?php
 
+$aliases['live'] = array (
+  'parent' => '@server.site5-uvps1',
+  'root' => '/srv/www/live.westkingdom.org/drupal',
+  'uri' => 'http://westkingdom.org',
+  'path-aliases' => array(
+    '%drush-script' => 'drush',
+  ),
+);
+
 $aliases['stage'] = array (
   'parent' => '@server.site5-uvps1-dev',
   'root' => '/srv/www/stage.westkingdom.org/drupal',
@@ -10,7 +19,6 @@ $aliases['stage'] = array (
       'enable' => array('devel', 'stage_file_proxy'),
       'disable' => array('passwordless'),
       'sanitize' => TRUE,
-      'sanitize-password' => '1066',
       'permission' => array(
         'authenticated user' => array(
           'add' => array('access devel information', 'access environment indicator'),
@@ -23,11 +31,8 @@ $aliases['stage'] = array (
   ),
 );
 
-$aliases['live'] = array (
-  'parent' => '@server.site5-uvps1',
-  'root' => '/srv/www/live.westkingdom.org/drupal',
-  'uri' => 'http://westkingdom.org',
-  'path-aliases' => array(
-    '%drush-script' => 'drush',
-  ),
-);
+$sanitizePasswordFile = __DIR__ . '/sanitize-password.txt';
+if (file_exists($sanitizePasswordFile)) {
+  $sanitizePassword = file_get_contents($sanitizePasswordFile);
+  $aliases['stage']['target-command-specific']['sql-sync']['sanitize-password'] = trim($sanitizePassword);
+}

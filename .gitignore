@@ -18,6 +18,7 @@
 currentstate.westkingdom.org.yaml
 server.westkingdom.org.yaml
 .drush/cache/
+.drush/sanitize-password.txt
 logs
 Maildir
 tools/drush/vendor
