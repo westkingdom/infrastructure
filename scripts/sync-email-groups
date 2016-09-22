@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * This script pulls the group data down from westkingdom.org
+ * and then syncs it up with Google Apps groups.
+ */
+$home = dirname(__DIR__);
+$data = "$home/data";
+chdir($data);
+
+print "#\n# Fetching group data from westkingdom.org\n#";
+print "drush @wk.live wkx > server.westkingdom.org.yaml\n";
+passthru("drush @wk.live wkx > server.westkingdom.org.yaml");
+
+print "#\n# Updating Google App Groups\n#";
+print "hge sync server.westkingdom.org.yaml\n";
+passthru("hge sync server.westkingdom.org.yaml");

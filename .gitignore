@@ -15,6 +15,7 @@
 
 # Other files to ignore
 currentstate.westkingdom.org.yaml
+server.westkingdom.org.yaml
 .drush/cache/
 logs
 Maildir

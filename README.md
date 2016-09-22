@@ -17,18 +17,39 @@ To avoid credentials leakage from this server, absolutely no user data is used i
 
 ## Infrastructure Server Structure
 
+The local working copy of this repository on the infrastructure server is cloned to the home directory of the infrastructure user -- in other words, /home/wk_infrastructure/.git.
+
 The contents of this server are as follows:
 
+- .bash*: $PATH settings for the bash shell
 - .drush: Contains Drush aliases for accessing westkingdom.org
 - .google-api: Contains credentials for the Google Apps API
 - .php: Contains directives to configure Dreamhost to use PHP 7.
 - .ssh: Contains keys that have access to westkingdom.org and GitHub.
+- data:
+  - currentstate.westkingdom.org.yaml: Data last pushed to Google Apps
+  - server.westkingdom.org.yaml: Data pulled from westkingdom.org
 - infrastructure: Web services
 - scripts:
-  - setup: Run to set up tools & c. the first time
+  - install: Install composer dependencies for our tools
+  - sync-email-groups: Refresh data from westkingdom.org and sync with Google Apps
 - tools
   - drush: Used to fetch the organic groups data
   - hierarchical-email-cli: Used to push updates to Google Apps groups
 
-Clearly, all of the credentials live on the server, but are not committed in this repository. Otherwise it would sort of defeat the purpose.
+Clearly, the various credentials that are stored on the server are not committed in this repository. Otherwise it would sort of defeat the purpose.
 
+## Composer Resource Limitations
+
+Our tiny shared instance server does not have enough resources to be able to run 'composer udpate', or even 'composer require' for a component not yet installed on the system.  These Composer operations are extremely resource-intensive, even for small applications.
+
+Dreamhost reports the following error message when it kills a resource-intensive program:
+
+    Yikes! One of your processes (php, pid 3881) was just killed for excessive resource usage. Please contact DreamHost Support for details.
+
+The 'composer install' operation, on the other hand, runs with very little resource requirements, as long as there is a 'composer.lock' file present.  We therefore commit the composer.json and composer.lock file for each component we wish to install via Composer, and use the 'install' script to ensure these remain up-to-date.  This script should be run the first time this repository is cloned, and every time a newer set of files is pulled.
+
+## Dreamhost Documentation References
+
+- https://help.dreamhost.com/hc/en-us/articles/214200668-How-do-I-create-a-phprc-file-via-SSH-
+- https://help.dreamhost.com/hc/en-us/articles/214899037-Installing-Composer-overview
