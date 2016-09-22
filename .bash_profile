@@ -3,4 +3,4 @@
 umask 002
 PS1='[\h]$ '
 
-PATH=/usr/local/php70/bin:$HOME/tools/hierarchical-email-cli/scripts:$HOME/.php/composer:$HOME/.composer/vendor/bin:$PATH
+PATH=/usr/local/php70/bin:$HOME/tools/drush:$HOME/tools/hierarchical-email-cli/scripts:$HOME/.php/composer:$HOME/.composer/vendor/bin:$PATH
