@@ -1,4 +1,4 @@
-#!php
+#!/usr/bin/env php
 <?php
 
 $home = dirname(__DIR__);
