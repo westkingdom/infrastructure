@@ -1,0 +1,7 @@
+#!php
+<?php
+
+$home = dirname(__DIR__);
+
+passthru("cd $home/tools/drush && composer install");
+passthru("cd $home/tools/hierarchical-email-cli && composer install");

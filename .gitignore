@@ -16,4 +16,5 @@
 currentstate.westkingdom.org.yaml
 logs
 Maildir
-tools/hierarchical-email-cli
+tools/drush/vendor
+tools/hierarchical-email-cli/vendor
