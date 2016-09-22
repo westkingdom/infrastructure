@@ -10,6 +10,7 @@
 !.php
 !.bashrc
 !.bash_profile
+!.bash_common
 !.drush
 
 # Other files to ignore
