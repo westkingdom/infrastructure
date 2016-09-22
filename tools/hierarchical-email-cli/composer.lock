@@ -1106,16 +1106,16 @@
         },
         {
             "name": "westkingdom/hierarchical-email-cli",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/westkingdom/hierarchical-email-cli.git",
-                "reference": "a592a1bbba2b32409411ef140c86f14647406e9d"
+                "reference": "49b024d07f25697f09a66862bfa471ffc8b8ba06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/westkingdom/hierarchical-email-cli/zipball/a592a1bbba2b32409411ef140c86f14647406e9d",
-                "reference": "a592a1bbba2b32409411ef140c86f14647406e9d",
+                "url": "https://api.github.com/repos/westkingdom/hierarchical-email-cli/zipball/49b024d07f25697f09a66862bfa471ffc8b8ba06",
+                "reference": "49b024d07f25697f09a66862bfa471ffc8b8ba06",
                 "shasum": ""
             },
             "require": {
@@ -1127,6 +1127,10 @@
                 "phpspec/prophecy-phpunit": "~1.0",
                 "phpunit/phpunit": "^3.5"
             },
+            "bin": [
+                "scripts/hge",
+                "scripts/sync-email-groups"
+            ],
             "type": "project",
             "extra": {
                 "branch-alias": {
@@ -1152,7 +1156,7 @@
             ],
             "description": "Commandline tool for the Hierarchical Group Email library.",
             "homepage": "https://github.com/westkingdom/hierarchical-email-cli",
-            "time": "2016-09-13 04:55:07"
+            "time": "2016-09-22 05:02:11"
         },
         {
             "name": "westkingdom/hierarchical-group-email",
