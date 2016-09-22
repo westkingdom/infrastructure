@@ -9,10 +9,10 @@ $home = dirname(__DIR__);
 $data = "$home/data";
 chdir($data);
 
-print "#\n# Fetching group data from westkingdom.org\n#";
+print "#\n# Fetching group data from westkingdom.org\n#\n";
 print "drush @wk.live wkx > server.westkingdom.org.yaml\n";
 passthru("drush @wk.live wkx > server.westkingdom.org.yaml");
 
-print "#\n# Updating Google App Groups\n#";
+print "#\n# Updating Google App Groups\n#\n";
 print "hge sync server.westkingdom.org.yaml\n";
 passthru("hge sync server.westkingdom.org.yaml");
