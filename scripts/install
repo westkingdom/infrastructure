@@ -3,7 +3,7 @@
 
 /**
  * This script installs the composer dependencies for the
- * various applications we use.
+ * various applications we use, and also configures our crontab.
  */
 $home = dirname(__DIR__);
 
@@ -12,3 +12,17 @@ passthru("cd $home/tools/drush && composer install");
 
 print "#\n# Installing hierarchical-email-cli dependencies\n#";
 passthru("cd $home/tools/hierarchical-email-cli && composer install");
+
+$old_crontab = '';
+exec("crontab -l | grep -v sync-email-groups", $old_crontab, $status);
+
+$old_crontab = implode("\n", $old_crontab);
+if (empty($old_crontab)) {
+  $old_crontab = 'MAILTO = ""';
+}
+
+$old_crontab .= "\n";
+$old_crontab .= '0 */4 * * * /usr/bin/env PATH=$PATH:$HOME/scripts:$HOME/tools/drush/vendor/bin:$HOME/tools/hierarchical-email-cli/vendor/bin:$HOME/.composer/vendor/bin $HOME/scripts/sync-email-groups';
+
+file_put_contents('/tmp/crontab.txt', $old_crontab);
+exec('crontab /tmp/crontab.txt');
