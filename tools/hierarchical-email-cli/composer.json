@@ -1,5 +1,12 @@
 {
     "require": {
         "westkingdom/hierarchical-email-cli": "^0.2.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "platform": {
+            "php": "5.5"
+        }
     }
 }
