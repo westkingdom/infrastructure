@@ -1,6 +1,5 @@
 {
-    "minimum-stability": "dev",
     "require": {
-        "westkingdom/hierarchical-email-cli": "^0.2"
+        "westkingdom/hierarchical-email-cli": "^0.2.4"
     }
 }
