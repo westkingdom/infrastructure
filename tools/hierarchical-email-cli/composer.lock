@@ -1139,16 +1139,16 @@
         },
         {
             "name": "westkingdom/hierarchical-email-cli",
-            "version": "0.2.4",
+            "version": "0.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/westkingdom/hierarchical-email-cli.git",
-                "reference": "7c0164ec4c42591772d9a675a37caa822113d90d"
+                "reference": "01df9a822112560570e158645403bea665a29687"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/westkingdom/hierarchical-email-cli/zipball/7c0164ec4c42591772d9a675a37caa822113d90d",
-                "reference": "7c0164ec4c42591772d9a675a37caa822113d90d",
+                "url": "https://api.github.com/repos/westkingdom/hierarchical-email-cli/zipball/01df9a822112560570e158645403bea665a29687",
+                "reference": "01df9a822112560570e158645403bea665a29687",
                 "shasum": ""
             },
             "require": {
@@ -1188,7 +1188,7 @@
             ],
             "description": "Commandline tool for the Hierarchical Group Email library.",
             "homepage": "https://github.com/westkingdom/hierarchical-email-cli",
-            "time": "2017-12-27T06:09:53+00:00"
+            "time": "2017-12-27T06:31:08+00:00"
         },
         {
             "name": "westkingdom/hierarchical-group-email",
