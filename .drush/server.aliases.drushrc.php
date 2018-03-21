@@ -1,11 +1,10 @@
 <?php
 
-$aliases['site5-uvps1'] = array(
-  'remote-host' => 'server.westkingdom.org', // 50.23.81.227
-  'remote-user' => 'wkadmin',
+$aliases['live'] = array(
+  'remote-host' => 'server.westkingdom.org', //69.164.203.8 
+  'remote-user' => 'maint',
 );
-$aliases['site5-uvps1-dev'] = array(
-  'remote-host' => 'server.westkingdom.org', // 50.23.81.227
-  'remote-user' => 'www-dev',
+$aliases['stage'] = array(
+  'remote-host' => 'server.westkingdom.org', //69.164.203.8
+  'remote-user' => 'maint',
 );
-
