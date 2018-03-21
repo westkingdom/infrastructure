@@ -11,7 +11,7 @@ chdir($data);
 
 print "#\n# Fetching group data from westkingdom.org\n#\n";
 print "drush @wk.live wkx > server.westkingdom.org.yaml\n";
-passthru("drush @wk.live wkx > server.westkingdom.org.yaml");
+passthru("drush @wk.live wkx > server.westkingdom.org.yaml", $status);
 
 if ($status) {
   print "Could not get group data from live server.\n";
