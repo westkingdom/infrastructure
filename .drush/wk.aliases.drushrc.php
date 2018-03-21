@@ -1,7 +1,7 @@
 <?php
 
 $aliases['live'] = array (
-  'parent' => '@server.site5-uvps1',
+  'parent' => '@server.xalg',
   'root' => '/srv/www/live.westkingdom.org/drupal',
   'uri' => 'http://westkingdom.org',
   'path-aliases' => array(
@@ -10,7 +10,7 @@ $aliases['live'] = array (
 );
 
 $aliases['stage'] = array (
-  'parent' => '@server.site5-uvps1-dev',
+  'parent' => '@server.xalg',
   'root' => '/srv/www/stage.westkingdom.org/drupal',
   'uri' => 'http://stage.westkingdom.org',
   'target-command-specific' => array(
