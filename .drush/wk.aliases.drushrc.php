@@ -2,7 +2,7 @@
 
 $aliases['live'] = array (
   'parent' => '@server.xalg',
-  'root' => '/srv/www/live.westkingdom.org/drupal',
+  'root' => '/var/www/westkingdom/drupal',
   'uri' => 'http://westkingdom.org',
   'path-aliases' => array(
     '%drush-script' => 'drush',
@@ -11,7 +11,7 @@ $aliases['live'] = array (
 
 $aliases['stage'] = array (
   'parent' => '@server.xalg',
-  'root' => '/srv/www/stage.westkingdom.org/drupal',
+  'root' => '/var/www/westkingdom_stage/drupal',
   'uri' => 'http://stage.westkingdom.org',
   'target-command-specific' => array(
     'sql-sync' => array(
