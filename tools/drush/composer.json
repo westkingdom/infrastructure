@@ -1,5 +1,10 @@
 {
     "require": {
         "drush/drush": "~8"
+    },
+    "config": {
+        "platform": {
+            "php": "7.0.11"
+        }
     }
 }
